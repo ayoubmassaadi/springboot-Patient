@@ -1,4 +1,4 @@
-package com.example.springbootpatient;
+package com.example.hospitalProject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
