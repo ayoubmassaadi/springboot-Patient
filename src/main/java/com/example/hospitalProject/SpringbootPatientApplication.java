@@ -16,13 +16,13 @@ public class SpringbootPatientApplication {
         SpringApplication.run(SpringbootPatientApplication.class, args);
     }
 
-    @Bean
+    //@Bean
     public CommandLineRunner start(PatientRepository patientRepository){
         return args -> {
             Patient p1 = new Patient();
             p1.setNom("Massaadi");
             p1.setPrenom("Ayoub");
-            p1.setScore(35);
+            p1.setScore(235);
             p1.setDateNaissance(new Date());
             p1.setMalade(false);
 
