@@ -36,13 +36,13 @@
                         <td th:text="${p.malade}"></td>
                         <td th:text="${p.score}"></td>
                         <td>
-                            <a onclick="return confirm('Etes vous sure ?')" class="btn btn-danger"
+                            <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" onclick="return confirm('Etes vous sure ?')" class="btn btn-danger"
                                th:href="@{/admin/deletePatient(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
                                 <i class="bi bi-trash"></i>
                             </a>
                         </td>
                         <td>
-                            <a class="btn btn-success"
+                            <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="btn btn-success"
                                th:href="@{/admin/editPatient(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
                                 <i class="bi bi-pencil-fill"></i>
                             </a>
